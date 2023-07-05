@@ -1,1 +1,53 @@
-<p>expense-update works!</p>
+<mat-card>
+    <mat-card-title>Atualizar Despesa</mat-card-title>
+    <Form>
+        <mat-form-field>
+            <input matInput placeholder="Ano"
+                [(ngModel)]="expense.ano">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Mes"
+                [(ngModel)]="expense.mes">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cod. Orgao"
+                [(ngModel)]="expense.codOrgao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome Orgao"
+                [(ngModel)]="expense.nomeOrgao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Sub Elemento"
+                [(ngModel)]="expense.subElemento">
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input matInput placeholder="Valor Empenhado"
+                [(ngModel)]="expense.valorEmpenhado">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor Liquido"
+                [(ngModel)]="expense.valorLiquido">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Valor Pago"
+                [(ngModel)]="expense.valorPago">
+        </mat-form-field>
+    </Form>
+
+    <button mat-raised-button (click)= "updateExpense()" color="accent">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)= "cancel()" color="primary">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+

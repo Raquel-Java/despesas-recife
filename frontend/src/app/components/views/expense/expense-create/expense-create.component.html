@@ -1,1 +1,53 @@
-<p>expense-create works!</p>
+<mat-card>
+    <mat-card-title>Atualizar Produto</mat-card-title>
+    <Form>
+        <mat-form-field>
+            <input matInput placeholder="Ano"
+                [(ngModel)]="expense.ano">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Mes"
+                [(ngModel)]="expense.mes">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="codOrgao"
+                [(ngModel)]="expense.codOrgao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="nomeOrgao"
+                [(ngModel)]="expense.nomeOrgao">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="subElemento"
+                [(ngModel)]="expense.subElemento">
+        </mat-form-field>
+
+
+        <mat-form-field>
+            <input matInput placeholder="valorEmpenhado"
+                [(ngModel)]="expense.valorEmpenhado">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="valorLiquido"
+                [(ngModel)]="expense.valorLiquido">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="valorPago"
+                [(ngModel)]="expense.valorPago">
+        </mat-form-field>
+    </Form>
+
+    <button mat-raised-button (click)= "createExpense()" color="accent">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)= "cancel()" color="primary">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+

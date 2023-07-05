@@ -1,1 +1,33 @@
-<p>expense-delete works!</p>
+<mat-card>
+    <mat-card-title>Confirmar Exclusão da Despesa</mat-card-title>
+    <Form>
+        <mat-form-field>
+            <input matInput placeholder="ID"
+                [value]="expense.id">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Ano"
+                [value]="expense.ano">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Mês"
+                [value]="expense.mes">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Valor Liquido"
+                [value]="expense.valorLiquido">
+        </mat-form-field>
+    </Form>
+
+    <button mat-raised-button (click)= "deleteExpense()" color="warn">
+        Deletar
+    </button>
+    
+    <button mat-raised-button (click)= "cancel()" color="primary">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+

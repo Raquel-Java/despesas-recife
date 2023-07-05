@@ -1,48 +1,15 @@
 {
-    "expense": [
-        {
-            "ano": "2023",
-            "mes": "3",
-            "codOrgao": 1,
-            "nomeOrgao": "INFRAESTRUTURA",
-            "subElemento": "INDENIÇÃOES",
-            "valorEmpenhado": "",
-            "valorLiquido": "",
-            "valorPago": "",
-            "id": 1
-        },
-        {
-            "ano": "2023",
-            "mes": "3",
-            "codOrgao": 1,
-            "nomeOrgao": "INFRAESTRUTURA",
-            "subElemento": "INDENIÇÃOES",
-            "valorEmpenhado": "",
-            "valorLiquido": "",
-            "valorPago": "",
-            "id": 2
-        },
-        {
-            "ano": "2023",
-            "mes": "3",
-            "codOrgao": 1,
-            "nomeOrgao": "INFRAESTRUTURA",
-            "subElemento": "INDENIÇÃOES",
-            "valorEmpenhado": "",
-            "valorLiquido": "",
-            "valorPago": "",
-            "id": 3
-        },
-        {
-            "ano": "2023",
-            "mes": "3",
-            "codOrgao": 1,
-            "nomeOrgao": "INFRAESTRUTURA",
-            "subElemento": "INDENIÇÃOES",
-            "valorEmpenhado": "",
-            "valorLiquido": "",
-            "valorPago": "",
-            "id": 4
-        }
-    ]
+  "expense": [
+    {
+      "ano": "2023",
+      "mes": "3",
+      "codOrgao": "10",
+      "nomeOrgao": "INFRAESTRUTURA",
+      "subElemento": "ESCOLA",
+      "valorEmpenhado": "5",
+      "valorLiquido": "6",
+      "valorPago": "7",
+      "id": 4
+    }
+  ]
 }
