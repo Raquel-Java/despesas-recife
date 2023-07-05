@@ -1,0 +1,48 @@
+{
+    "despesas": [
+        {
+            "ano-mov": "2023",
+            "mes-mov": "3",
+            "orgao-cod": 1,
+            "orgao-nome": "INFRAESTRUTURA",
+            "sublemento-nome": "INDENIÇÃOES",
+            "valor-emprenhado": "",
+            "valor-liquido": "",
+            "valor-pago": "",
+            "id": 1
+        },
+        {
+            "ano-mov": "2023",
+            "mes-mov": "3",
+            "orgao-cod": 1,
+            "orgao-nome": "INFRAESTRUTURA",
+            "sublemento-nome": "INDENIÇÃOES",
+            "valor-emprenhado": "",
+            "valor-liquido": "",
+            "valor-pago": "",
+            "id": 2
+        },
+        {
+            "ano-mov": "2023",
+            "mes-mov": "3",
+            "orgao-cod": 1,
+            "orgao-nome": "INFRAESTRUTURA",
+            "sublemento-nome": "INDENIÇÃOES",
+            "valor-emprenhado": "",
+            "valor-liquido": "",
+            "valor-pago": "",
+            "id": 3
+        },
+        {
+            "ano-mov": "2023",
+            "mes-mov": "3",
+            "orgao-cod": 1,
+            "orgao-nome": "INFRAESTRUTURA",
+            "sublemento-nome": "INDENIÇÃOES",
+            "valor-emprenhado": "",
+            "valor-liquido": "",
+            "valor-pago": "",
+            "id": 4
+        }
+    ]
+}
