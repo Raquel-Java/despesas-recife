@@ -12,7 +12,7 @@ export class ExpenseReadComponent implements OnInit {
   expenses: Expense[] = [];
   displayedColumns = ['id','ano','mes'
   ,'codOrgao','nomeOrgao','subElemento'
-  ,'valorEmpenhado','valorLiquido','valorPago']
+  ,'valorEmpenhado','valorLiquido','valorPago','action']
 
   constructor(private expenseService: ExpenseService) { }
 
