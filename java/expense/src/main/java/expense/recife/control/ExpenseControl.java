@@ -38,11 +38,11 @@ public class ExpenseControl {
 	       
 	 }
 	 
-//	 @CrossOrigin(origins = "*")
-//	 @GetMapping(value = "/all")
-//	 public List<Expense> buscar(){
-//	      return service.getExpense();
-//	 }
+	//	 @CrossOrigin(origins = "*")
+	//	 @GetMapping(value = "/all")
+	//	 public List<Expense> buscar(){
+	//	      return service.getExpense();
+	//	 }
 	 
 	 @CrossOrigin(origins = "*")
 	 @GetMapping

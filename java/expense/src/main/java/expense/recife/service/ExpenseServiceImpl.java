@@ -41,6 +41,8 @@ public class ExpenseServiceImpl implements ExpenseService{
 				expense.getValorEmpenhado(), 
 				expense.getValorLiquido(), 
 				expense.getValorPago());
+		
+//		Expense e = new Expense()
 		return repository.save(e);
 	}
 
@@ -132,7 +134,7 @@ public class ExpenseServiceImpl implements ExpenseService{
 	@Override
 	public Expense changeForExpense(ExpenseDto expense) {
 		Expense e = new Expense(
-				expense.getid(), 
+				expense.getId(), 
 				expense.getAno(), 
 				expense.getMes(), 
 				expense.getCodOrgao(), 

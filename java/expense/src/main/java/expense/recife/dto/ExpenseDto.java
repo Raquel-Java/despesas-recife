@@ -15,36 +15,23 @@ public class ExpenseDto {
 	String valorLiquido;
 	String valorPago;
 	
-	public ExpenseDto(Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, String subElemento,
-			String valorEmpenhado, String valorLiquido, String valorPago) {
-		this.ano = ano;
-		this.mes = mes;
-		this.codOrgao = codOrgao;
-		this.nomeOrgao = nomeOrgao;
-		this.subElemento = subElemento;
-		this.valorEmpenhado = valorEmpenhado;
-		this.valorLiquido = valorLiquido;
-		this.valorPago = valorPago;
-	}
-	
-	
-	public ExpenseDto(Long id,Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, String subElemento,
-			String valorEmpenhado, String valorLiquido, String valorPago) {
-		this.id =id;
-		this.ano = ano;
-		this.mes = mes;
-		this.codOrgao = codOrgao;
-		this.nomeOrgao = nomeOrgao;
-		this.subElemento = subElemento;
-		this.valorEmpenhado = valorEmpenhado;
-		this.valorLiquido = valorLiquido;
-		this.valorPago = valorPago;
-	}
-
 	public ExpenseDto() {
 	}
 
-	public Long getid() {
+	public ExpenseDto(Long id, Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, String subElemento,
+			String valorEmpenhado, String valorLiquido, String valorPago) {
+		this.id = id;
+		this.ano = ano;
+		this.mes = mes;
+		this.codOrgao = codOrgao;
+		this.nomeOrgao = nomeOrgao;
+		this.subElemento = subElemento;
+		this.valorEmpenhado = valorEmpenhado;
+		this.valorLiquido = valorLiquido;
+		this.valorPago = valorPago;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
