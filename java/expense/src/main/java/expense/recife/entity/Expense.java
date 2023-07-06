@@ -15,7 +15,8 @@ public class Expense {
 	private Integer mes;
 	private Integer codOrgao;
 	private String nomeOrgao;
-	private Integer codUnidade;
+	private String codUnidade;
+	private String unidade;
 	private Integer codCategoriaEconomica;
 	private String categoriaEconomica;
 	private Integer codGrupoDespesa;
@@ -33,7 +34,7 @@ public class Expense {
 	private Integer codPrograma;
 	private String programa;
 	private Integer codAcao;
-	private String acaoe;
+	private String acao;
 	private Integer codFonteRecurso;
 	private String fonteRecurso;
 	private Integer empenhoAno;
@@ -50,15 +51,15 @@ public class Expense {
 	private String valorLiquido;
 	private String valorPago;
 	
-	public Expense(Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, Integer codUnidade,
+	public Expense(Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, String codUnidade,
 			Integer codCategoriaEconomica, String categoriaEconomica, Integer codGrupoDespesa, String grupoDespesa,
 			Integer codModalidadeAplicacao, String modalidadeAplicacao, Integer codElemento, String elementoNome,
 			Integer codSubElemento, String subElemento, Integer codFuncao, String funcao, Integer codSubfuncao,
-			String subfuncao, Integer codPrograma, String programa, Integer codAcao, String acaoe,
+			String subfuncao, Integer codPrograma, String programa, Integer codAcao, String acao,
 			Integer codFonteRecurso, String fonteRecurso, Integer empenhoAno, String empenhoModalidade,
 			Integer codEmpenhoModalidade, Integer empenhoNumero, Integer subEmpenho, String indicadorSubempenho,
 			Integer codCredor, String credor, Integer codModalidadeLicitacao, String modalidadeLicitacao,
-			String valorEmpenhado, String valorLiquido, String valorPago) {
+			String valorEmpenhado, String valorLiquido, String valorPago,String unidade) {
 		this.ano = ano;
 		this.mes = mes;
 		this.codOrgao = codOrgao;
@@ -81,7 +82,7 @@ public class Expense {
 		this.codPrograma = codPrograma;
 		this.programa = programa;
 		this.codAcao = codAcao;
-		this.acaoe = acaoe;
+		this.acao = acao;
 		this.codFonteRecurso = codFonteRecurso;
 		this.fonteRecurso = fonteRecurso;
 		this.empenhoAno = empenhoAno;
@@ -97,6 +98,7 @@ public class Expense {
 		this.valorEmpenhado = valorEmpenhado;
 		this.valorLiquido = valorLiquido;
 		this.valorPago = valorPago;
+		this.unidade = unidade;
 	}
 	
 	
@@ -143,11 +145,11 @@ public class Expense {
 		this.nomeOrgao = nomeOrgao;
 	}
 
-	public Integer getCodUnidade() {
+	public String getCodUnidade() {
 		return codUnidade;
 	}
 
-	public void setCodUnidade(Integer codUnidade) {
+	public void setCodUnidade(String codUnidade) {
 		this.codUnidade = codUnidade;
 	}
 
@@ -287,12 +289,12 @@ public class Expense {
 		this.codAcao = codAcao;
 	}
 
-	public String getAcaoe() {
-		return acaoe;
+	public String getAcao() {
+		return acao;
 	}
 
-	public void setAcaoe(String acaoe) {
-		this.acaoe = acaoe;
+	public void setAcao(String acao) {
+		this.acao = acao;
 	}
 
 	public Integer getCodFonteRecurso() {
@@ -414,6 +416,18 @@ public class Expense {
 	public void setValorPago(String valorPago) {
 		this.valorPago = valorPago;
 	}
+
+
+	public String getUnidade() {
+		return unidade;
+	}
+
+
+	public void setUnidade(String unidade) {
+		this.unidade = unidade;
+	}
+	
+	
 	
 	
 	
