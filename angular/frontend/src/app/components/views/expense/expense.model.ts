@@ -1,11 +1,11 @@
 export interface Expense{
-    id?: number
+    id?: String
     ano: String
     mes: String
     codOrgao: String
     nomeOrgao: String
     subElemento: String
-    valorEmpenhado: number
-    valorLiquido: number
-    valorPago: number
+    valorEmpenhado: String
+    valorLiquido: String
+    valorPago: String
 }

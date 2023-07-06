@@ -11,7 +11,9 @@ import expense.recife.entity.Expense;
 @Service
 public interface ExpenseService {
 
-	List<Expense> getExpense();
+	//List<Expense> getExpense();
+	
+	List<ExpenseDto> getExpenseDto();
 	
 	Optional<Expense> getExpenseForById(String id);
 	

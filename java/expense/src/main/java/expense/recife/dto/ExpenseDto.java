@@ -49,7 +49,7 @@ public class ExpenseDto {
 	}
 
 	public void setId(Long id) {
-		id = id;
+		this.id = id;
 	}
 
 	public Integer getAno() {

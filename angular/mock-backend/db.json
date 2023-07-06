@@ -1,3 +1,59 @@
 {
-  "expense": []
+  "expense": [
+    {
+      "id": 192,
+      "ano": 2017,
+      "mes": 1,
+      "codOrgao": 14,
+      "nomeOrgao": "SECRETARIA DE EDUCAÇÃO",
+      "subElemento": "GRATIFICAÇÃO POR EXERCÍCIO DE CARGOS TÉCNICOS",
+      "valorEmpenhado": "14997,61",
+      "valorLiquido": "14997,61",
+      "valorPago": "14997,61"
+    },
+    {
+      "id": 193,
+      "ano": 2017,
+      "mes": 7,
+      "codOrgao": 14,
+      "nomeOrgao": "SECRETARIA DE EDUCAÇÃO",
+      "subElemento": "GRATIFICAÇÃO POR EXERCÍCIO DE CARGOS TÉCNICOS",
+      "valorEmpenhado": "63467,22",
+      "valorLiquido": "63467,22",
+      "valorPago": "63467,22"
+    },
+    {
+      "id": 194,
+      "ano": 2017,
+      "mes": 10,
+      "codOrgao": 14,
+      "nomeOrgao": "SECRETARIA DE EDUCAÇÃO",
+      "subElemento": "GRATIFICAÇÃO POR EXERCÍCIO DE CARGOS TÉCNICOS",
+      "valorEmpenhado": "62175,48",
+      "valorLiquido": "62175,48",
+      "valorPago": "62175,48"
+    },
+    {
+      "id": 141,
+      "ano": 2017,
+      "mes": 1,
+      "codOrgao": 10,
+      "nomeOrgao": "GABINETE DO PREFEITO",
+      "subElemento": "13º SALÁRIO",
+      "valorEmpenhado": "818,18",
+      "valorLiquido": "818,18",
+      "valorPago": "818,18"
+    },
+    {
+      "id": 160,
+      "ano": 2017,
+      "mes": 10,
+      "codOrgao": 10,
+      "nomeOrgao": "GABINETE DO PREFEITO",
+      "subElemento": "ADICIONAL NOTURNO",
+      "valorEmpenhado": "331,76",
+      "valorLiquido": "331,76",
+      "valorPago": "331,76"
+    }
+  ]
 }

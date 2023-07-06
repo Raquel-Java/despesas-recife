@@ -38,10 +38,16 @@ public class ExpenseControl {
 	       
 	 }
 	 
+//	 @CrossOrigin(origins = "*")
+//	 @GetMapping(value = "/all")
+//	 public List<Expense> buscar(){
+//	      return service.getExpense();
+//	 }
+	 
 	 @CrossOrigin(origins = "*")
-	 @GetMapping(value = "/all")
-	 public List<Expense> buscar(){
-	      return service.getExpense();
+	 @GetMapping
+	 public List<ExpenseDto> buscar(){
+	      return service.getExpenseDto();
 	 }
 	 
 	 @CrossOrigin(origins = "*")
@@ -51,19 +57,19 @@ public class ExpenseControl {
 	 }
 	 
 	 @CrossOrigin(origins = "*")
-	 @PostMapping(value = "/new")
+	 @PostMapping
 	 public ResponseEntity<?> salvar(@RequestBody ExpenseDto obj){
 		 return new ResponseEntity<Expense>(service.createExpense(obj), HttpStatus.OK);
 	 }
 	 
 	 @CrossOrigin(origins = "*")
-	 @PutMapping(value = "/update")
+	 @PutMapping
 	 public ResponseEntity<Expense> atualizar(@RequestBody ExpenseDto obj){
 		 return new ResponseEntity<Expense>(service.changeForExpense(obj), HttpStatus.OK);
 	 }
 	 
 	 @CrossOrigin(origins = "*")
-	 @DeleteMapping(value = "/by")
+	 @DeleteMapping
 	 public void deletar(@RequestParam("id") String id, HttpServletRequest request){
 		 service.removeExpense(id);
 	 }

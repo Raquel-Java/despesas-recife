@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class ExpenseClient {
 	
-	private final String URL_EXPENSE_SERVICE_URI = "http://dados.recife.pe.gov.br/api/3/action/datastore_search?resource_id=d4d8a7f0-d4be-4397-b950-f0c991438111";
+	private final String URL_EXPENSE_SERVICE_URI = "http://dados.recife.pe.gov.br/api/3/action/datastore_search?resource_id=d4d8a7f0-d4be-4397-b950-f0c991438111&limit=30";
 
 	@Autowired
 	RestTemplate restTemplate;

@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class ExpenseService {
 
-  baseUrl = "http://localhost:3001/expense"
+  //baseUrl = "http://localhost:3001/expense"
+
+  baseUrl = "http://localhost:8080/expense/v1"
+  baseUrlBy = "http://localhost:8080/expense/v1/by"
 
   constructor(private snackBar: MatSnackBar, private http:HttpClient ,private router:Router) { }
 
@@ -28,13 +31,6 @@ export class ExpenseService {
     return EMPTY
   }
 
-  create(expense:Expense):Observable<Expense>{
-    return this.http.post<Expense>(this.baseUrl,expense).pipe(
-      map((obj: any)=>obj),
-      catchError((e: any)=> this.errorHandler(e))
-    );
-  }
-
   read():Observable<Expense[]>{
     return this.http.get<Expense[]>(this.baseUrl).pipe(
       map((obj: any)=>obj),
@@ -42,8 +38,15 @@ export class ExpenseService {
     );
   }
 
+  create(expense:Expense):Observable<Expense>{
+    return this.http.post<Expense>(this.baseUrl,expense).pipe(
+      map((obj: any)=>obj),
+      catchError((e: any)=> this.errorHandler(e))
+    );
+  }
+
   readById(id: any): Observable<Expense>{
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrlBy}/${id}`
     return this.http.get<Expense>(url).pipe(
       map((obj: any)=>obj),
       catchError((e: any)=> this.errorHandler(e))

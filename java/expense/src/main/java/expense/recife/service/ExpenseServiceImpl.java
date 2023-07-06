@@ -20,10 +20,10 @@ public class ExpenseServiceImpl implements ExpenseService{
 	
 	@Autowired private ExpenseRepository repository;
 
-	@Override
-	public List<Expense> getExpense() {
-		return repository.findAll();
-	}
+//	@Override
+//	public List<Expense> getExpense() {
+//		return repository.findAll();
+//	}
 
 	@Override
 	public void removeExpense(String id) {
@@ -69,10 +69,6 @@ public class ExpenseServiceImpl implements ExpenseService{
 
 		            // Verifica se a lista "records" não é nula e é uma lista
 		            if (recordsList != null && recordsList instanceof List) {
-		                // Aquiiiii pego os itens percorro pra insrir 
-		            	//na entidade pra gravar no banco !!!
-		            	
-		            	
 		            	for (Object record : recordsList) {
 		                    if (record instanceof LinkedHashMap) {
 		                        LinkedHashMap<?, ?> recordMap = (LinkedHashMap<?, ?>) record;
@@ -152,6 +148,34 @@ public class ExpenseServiceImpl implements ExpenseService{
 	@Override
 	public Optional<Expense> getExpenseForById(String id){
 		return repository.findById(Long.valueOf(id));
+	}
+
+	@Override
+	public List<ExpenseDto> getExpenseDto() {
+		
+		List<Expense> Expenses = repository.findAll();
+		
+		List<ExpenseDto> ExpensesDto = new ArrayList<>();
+		
+		for (Expense expense : Expenses) {
+			ExpenseDto e = new ExpenseDto();	
+			e.setId(expense.getId());
+			e.setAno(expense.getAno());
+			e.setCodOrgao(expense.getCodOrgao());
+			e.setMes(expense.getMes());
+			e.setNomeOrgao(expense.getNomeOrgao());
+			e.setSubElemento(expense.getSubElemento());
+			e.setValorEmpenhado(expense.getValorEmpenhado());
+			e.setValorLiquido(expense.getValorLiquido());
+			e.setValorPago(expense.getValorPago());
+			
+			ExpensesDto.add(e);
+			
+		}
+		
+		
+		
+		return ExpensesDto;
 	}
 
 }

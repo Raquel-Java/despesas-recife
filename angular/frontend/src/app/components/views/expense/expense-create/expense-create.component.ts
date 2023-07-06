@@ -16,9 +16,9 @@ export class ExpenseCreateComponent implements OnInit {
     codOrgao: '',
     nomeOrgao: '',
     subElemento: '',
-    valorEmpenhado: 0,
-    valorLiquido: 0,
-    valorPago: 0
+    valorEmpenhado: '',
+    valorLiquido: '',
+    valorPago: ''
   }
 
   constructor(private expenseService: ExpenseService, 
