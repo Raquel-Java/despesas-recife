@@ -9,19 +9,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import expense.recife.entity.Expense;
-
 @Component
 public class ExpenseClient {
 	
-	private final String URL_EXPENSE_SERVICE_URI = "http://dados.recife.pe.gov.br/api/3/action/datastore_search";
+	private final String URL_EXPENSE_SERVICE_URI = "http://dados.recife.pe.gov.br/api/3/action/datastore_search?resource_id=d4d8a7f0-d4be-4397-b950-f0c991438111";
 
 	@Autowired
 	RestTemplate restTemplate;
 	
-	public List<Expense>expenseForClient(){
-		ResponseEntity<Expense> response = restTemplate.getForEntity(URL_EXPENSE_SERVICE_URI, Expense.class);
+	public List<Object>expenseForClient(){
+		ResponseEntity<Object> response = restTemplate.getForEntity(URL_EXPENSE_SERVICE_URI, Object.class);
 		return Arrays.asList(Objects.requireNonNull(response.getBody()));
 	}
+	
+	
 	
 }

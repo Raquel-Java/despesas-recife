@@ -10,492 +10,413 @@ public class Expense {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
-	private Integer ano_movimentacao;
-	private Integer mes_movimentacao;
-	private Integer orgao_codigo;
-	private String orgao_nome;
-	private Integer unidade_codigo;
-	private Integer categoria_economica_codigo;
-	private String categoria_economica_nome;
-	private Integer grupo_despesa_codigo;
-	private String grupo_despesa_nome;
-	private Integer modalidade_aplicacao_codigo;
-	private String modalidade_aplicacao_nome;
-	private Integer elemento_codigo;
-	private String elemento_nome;
-	private Integer subelemento_codigo;
-	private String subelemento_nome;
-	private Integer funcao_codigo;
-	private String funcao_nome;
-	private Integer subfuncao_codigo;
-	private String subfuncao_nome;
-	private Integer programa_codigo;
-	private String programa_nome;
-	private Integer acao_codigo;
-	private String acao_nome;
-	private Integer fonte_recurso_codigo;
-	private String fonte_recurso_nome;
-	private Integer empenho_ano;
-	private String empenho_modalidade_nome;
-	private Integer empenho_modalidade_codigo;
-	private Integer empenho_numero;
-	private Integer subempenho;
-	private String indicador_subempenho;
-	private Integer credor_codigo;
-	private String credor_nome;
-	private Integer modalidade_licitacao_codigo;
-	private String modalidade_licitacao_nome;
-	private String valor_empenhado;
-	private String valor_liquidado;
-	private String valor_pago;
+	private Long id;
+	private Integer ano;
+	private Integer mes;
+	private Integer codOrgao;
+	private String nomeOrgao;
+	private Integer codUnidade;
+	private Integer codCategoriaEconomica;
+	private String categoriaEconomica;
+	private Integer codGrupoDespesa;
+	private String grupoDespesa;
+	private Integer codModalidadeAplicacao;
+	private String modalidadeAplicacao;
+	private Integer codElemento;
+	private String elementoNome;
+	private Integer codSubElemento;
+	private String subElemento;
+	private Integer codFuncao;
+	private String funcao;
+	private Integer codSubfuncao;
+	private String subfuncao;
+	private Integer codPrograma;
+	private String programa;
+	private Integer codAcao;
+	private String acaoe;
+	private Integer codFonteRecurso;
+	private String fonteRecurso;
+	private Integer empenhoAno;
+	private String empenhoModalidade;
+	private Integer codEmpenhoModalidade;
+	private Integer empenhoNumero;
+	private Integer subEmpenho;
+	private String indicadorSubempenho;
+	private Integer codCredor;
+	private String credor;
+	private Integer codModalidadeLicitacao;
+	private String modalidadeLicitacao;
+	private String valorEmpenhado;
+	private String valorLiquido;
+	private String valorPago;
 	
-	
-	public Expense(Integer ano_movimentacao, Integer mes_movimentacao, Integer orgao_codigo, String orgao_nome,
-			Integer unidade_codigo, Integer categoria_economica_codigo, String categoria_economica_nome,
-			Integer grupo_despesa_codigo, String grupo_despesa_nome, Integer modalidade_aplicacao_codigo,
-			String modalidade_aplicacao_nome, Integer elemento_codigo, String elemento_nome, Integer subelemento_codigo,
-			String subelemento_nome, Integer funcao_codigo, String funcao_nome, Integer subfuncao_codigo,
-			String subfuncao_nome, Integer programa_codigo, String programa_nome, Integer acao_codigo, String acao_nome,
-			Integer fonte_recurso_codigo, String fonte_recurso_nome, Integer empenho_ano,
-			String empenho_modalidade_nome, Integer empenho_modalidade_codigo, Integer empenho_numero,
-			Integer subempenho, String indicador_subempenho, Integer credor_codigo, String credor_nome,
-			Integer modalidade_licitacao_codigo, String modalidade_licitacao_nome, String valor_empenhado,
-			String valor_liquidado, String valor_pago) {
-		this.ano_movimentacao = ano_movimentacao;
-		this.mes_movimentacao = mes_movimentacao;
-		this.orgao_codigo = orgao_codigo;
-		this.orgao_nome = orgao_nome;
-		this.unidade_codigo = unidade_codigo;
-		this.categoria_economica_codigo = categoria_economica_codigo;
-		this.categoria_economica_nome = categoria_economica_nome;
-		this.grupo_despesa_codigo = grupo_despesa_codigo;
-		this.grupo_despesa_nome = grupo_despesa_nome;
-		this.modalidade_aplicacao_codigo = modalidade_aplicacao_codigo;
-		this.modalidade_aplicacao_nome = modalidade_aplicacao_nome;
-		this.elemento_codigo = elemento_codigo;
-		this.elemento_nome = elemento_nome;
-		this.subelemento_codigo = subelemento_codigo;
-		this.subelemento_nome = subelemento_nome;
-		this.funcao_codigo = funcao_codigo;
-		this.funcao_nome = funcao_nome;
-		this.subfuncao_codigo = subfuncao_codigo;
-		this.subfuncao_nome = subfuncao_nome;
-		this.programa_codigo = programa_codigo;
-		this.programa_nome = programa_nome;
-		this.acao_codigo = acao_codigo;
-		this.acao_nome = acao_nome;
-		this.fonte_recurso_codigo = fonte_recurso_codigo;
-		this.fonte_recurso_nome = fonte_recurso_nome;
-		this.empenho_ano = empenho_ano;
-		this.empenho_modalidade_nome = empenho_modalidade_nome;
-		this.empenho_modalidade_codigo = empenho_modalidade_codigo;
-		this.empenho_numero = empenho_numero;
-		this.subempenho = subempenho;
-		this.indicador_subempenho = indicador_subempenho;
-		this.credor_codigo = credor_codigo;
-		this.credor_nome = credor_nome;
-		this.modalidade_licitacao_codigo = modalidade_licitacao_codigo;
-		this.modalidade_licitacao_nome = modalidade_licitacao_nome;
-		this.valor_empenhado = valor_empenhado;
-		this.valor_liquidado = valor_liquidado;
-		this.valor_pago = valor_pago;
+	public Expense(Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, Integer codUnidade,
+			Integer codCategoriaEconomica, String categoriaEconomica, Integer codGrupoDespesa, String grupoDespesa,
+			Integer codModalidadeAplicacao, String modalidadeAplicacao, Integer codElemento, String elementoNome,
+			Integer codSubElemento, String subElemento, Integer codFuncao, String funcao, Integer codSubfuncao,
+			String subfuncao, Integer codPrograma, String programa, Integer codAcao, String acaoe,
+			Integer codFonteRecurso, String fonteRecurso, Integer empenhoAno, String empenhoModalidade,
+			Integer codEmpenhoModalidade, Integer empenhoNumero, Integer subEmpenho, String indicadorSubempenho,
+			Integer codCredor, String credor, Integer codModalidadeLicitacao, String modalidadeLicitacao,
+			String valorEmpenhado, String valorLiquido, String valorPago) {
+		this.ano = ano;
+		this.mes = mes;
+		this.codOrgao = codOrgao;
+		this.nomeOrgao = nomeOrgao;
+		this.codUnidade = codUnidade;
+		this.codCategoriaEconomica = codCategoriaEconomica;
+		this.categoriaEconomica = categoriaEconomica;
+		this.codGrupoDespesa = codGrupoDespesa;
+		this.grupoDespesa = grupoDespesa;
+		this.codModalidadeAplicacao = codModalidadeAplicacao;
+		this.modalidadeAplicacao = modalidadeAplicacao;
+		this.codElemento = codElemento;
+		this.elementoNome = elementoNome;
+		this.codSubElemento = codSubElemento;
+		this.subElemento = subElemento;
+		this.codFuncao = codFuncao;
+		this.funcao = funcao;
+		this.codSubfuncao = codSubfuncao;
+		this.subfuncao = subfuncao;
+		this.codPrograma = codPrograma;
+		this.programa = programa;
+		this.codAcao = codAcao;
+		this.acaoe = acaoe;
+		this.codFonteRecurso = codFonteRecurso;
+		this.fonteRecurso = fonteRecurso;
+		this.empenhoAno = empenhoAno;
+		this.empenhoModalidade = empenhoModalidade;
+		this.codEmpenhoModalidade = codEmpenhoModalidade;
+		this.empenhoNumero = empenhoNumero;
+		this.subEmpenho = subEmpenho;
+		this.indicadorSubempenho = indicadorSubempenho;
+		this.codCredor = codCredor;
+		this.credor = credor;
+		this.codModalidadeLicitacao = codModalidadeLicitacao;
+		this.modalidadeLicitacao = modalidadeLicitacao;
+		this.valorEmpenhado = valorEmpenhado;
+		this.valorLiquido = valorLiquido;
+		this.valorPago = valorPago;
 	}
-
-
+	
+	
 	public Expense() {
 	}
 
-
 	public Long getId() {
-		return Id;
+		return id;
 	}
-
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
-
-	public Integer getAno_movimentacao() {
-		return ano_movimentacao;
+	public Integer getAno() {
+		return ano;
 	}
-
 
-	public void setAno_movimentacao(Integer ano_movimentacao) {
-		this.ano_movimentacao = ano_movimentacao;
+	public void setAno(Integer ano) {
+		this.ano = ano;
 	}
 
-
-	public Integer getMes_movimentacao() {
-		return mes_movimentacao;
+	public Integer getMes() {
+		return mes;
 	}
-
 
-	public void setMes_movimentacao(Integer mes_movimentacao) {
-		this.mes_movimentacao = mes_movimentacao;
+	public void setMes(Integer mes) {
+		this.mes = mes;
 	}
 
-
-	public Integer getOrgao_codigo() {
-		return orgao_codigo;
+	public Integer getCodOrgao() {
+		return codOrgao;
 	}
-
 
-	public void setOrgao_codigo(Integer orgao_codigo) {
-		this.orgao_codigo = orgao_codigo;
+	public void setCodOrgao(Integer codOrgao) {
+		this.codOrgao = codOrgao;
 	}
 
-
-	public String getOrgao_nome() {
-		return orgao_nome;
+	public String getNomeOrgao() {
+		return nomeOrgao;
 	}
 
-
-	public void setOrgao_nome(String orgao_nome) {
-		this.orgao_nome = orgao_nome;
+	public void setNomeOrgao(String nomeOrgao) {
+		this.nomeOrgao = nomeOrgao;
 	}
-
 
-	public Integer getUnidade_codigo() {
-		return unidade_codigo;
+	public Integer getCodUnidade() {
+		return codUnidade;
 	}
 
-
-	public void setUnidade_codigo(Integer unidade_codigo) {
-		this.unidade_codigo = unidade_codigo;
+	public void setCodUnidade(Integer codUnidade) {
+		this.codUnidade = codUnidade;
 	}
-
 
-	public Integer getCategoria_economica_codigo() {
-		return categoria_economica_codigo;
+	public Integer getCodCategoriaEconomica() {
+		return codCategoriaEconomica;
 	}
 
-
-	public void setCategoria_economica_codigo(Integer categoria_economica_codigo) {
-		this.categoria_economica_codigo = categoria_economica_codigo;
+	public void setCodCategoriaEconomica(Integer codCategoriaEconomica) {
+		this.codCategoriaEconomica = codCategoriaEconomica;
 	}
 
-
-	public String getCategoria_economica_nome() {
-		return categoria_economica_nome;
+	public String getCategoriaEconomica() {
+		return categoriaEconomica;
 	}
-
 
-	public void setCategoria_economica_nome(String categoria_economica_nome) {
-		this.categoria_economica_nome = categoria_economica_nome;
+	public void setCategoriaEconomica(String categoriaEconomica) {
+		this.categoriaEconomica = categoriaEconomica;
 	}
 
-
-	public Integer getGrupo_despesa_codigo() {
-		return grupo_despesa_codigo;
+	public Integer getCodGrupoDespesa() {
+		return codGrupoDespesa;
 	}
-
 
-	public void setGrupo_despesa_codigo(Integer grupo_despesa_codigo) {
-		this.grupo_despesa_codigo = grupo_despesa_codigo;
+	public void setCodGrupoDespesa(Integer codGrupoDespesa) {
+		this.codGrupoDespesa = codGrupoDespesa;
 	}
 
-
-	public String getGrupo_despesa_nome() {
-		return grupo_despesa_nome;
+	public String getGrupoDespesa() {
+		return grupoDespesa;
 	}
 
-
-	public void setGrupo_despesa_nome(String grupo_despesa_nome) {
-		this.grupo_despesa_nome = grupo_despesa_nome;
+	public void setGrupoDespesa(String grupoDespesa) {
+		this.grupoDespesa = grupoDespesa;
 	}
-
 
-	public Integer getModalidade_aplicacao_codigo() {
-		return modalidade_aplicacao_codigo;
+	public Integer getCodModalidadeAplicacao() {
+		return codModalidadeAplicacao;
 	}
 
-
-	public void setModalidade_aplicacao_codigo(Integer modalidade_aplicacao_codigo) {
-		this.modalidade_aplicacao_codigo = modalidade_aplicacao_codigo;
+	public void setCodModalidadeAplicacao(Integer codModalidadeAplicacao) {
+		this.codModalidadeAplicacao = codModalidadeAplicacao;
 	}
-
 
-	public String getModalidade_aplicacao_nome() {
-		return modalidade_aplicacao_nome;
+	public String getModalidadeAplicacao() {
+		return modalidadeAplicacao;
 	}
 
-
-	public void setModalidade_aplicacao_nome(String modalidade_aplicacao_nome) {
-		this.modalidade_aplicacao_nome = modalidade_aplicacao_nome;
+	public void setModalidadeAplicacao(String modalidadeAplicacao) {
+		this.modalidadeAplicacao = modalidadeAplicacao;
 	}
-
 
-	public Integer getElemento_codigo() {
-		return elemento_codigo;
+	public Integer getCodElemento() {
+		return codElemento;
 	}
 
-
-	public void setElemento_codigo(Integer elemento_codigo) {
-		this.elemento_codigo = elemento_codigo;
+	public void setCodElemento(Integer codElemento) {
+		this.codElemento = codElemento;
 	}
-
 
-	public String getElemento_nome() {
-		return elemento_nome;
+	public String getElementoNome() {
+		return elementoNome;
 	}
 
-
-	public void setElemento_nome(String elemento_nome) {
-		this.elemento_nome = elemento_nome;
+	public void setElementoNome(String elementoNome) {
+		this.elementoNome = elementoNome;
 	}
 
-
-	public Integer getSubelemento_codigo() {
-		return subelemento_codigo;
+	public Integer getCodSubElemento() {
+		return codSubElemento;
 	}
-
 
-	public void setSubelemento_codigo(Integer subelemento_codigo) {
-		this.subelemento_codigo = subelemento_codigo;
+	public void setCodSubElemento(Integer codSubElemento) {
+		this.codSubElemento = codSubElemento;
 	}
 
-
-	public String getSubelemento_nome() {
-		return subelemento_nome;
+	public String getSubElemento() {
+		return subElemento;
 	}
-
 
-	public void setSubelemento_nome(String subelemento_nome) {
-		this.subelemento_nome = subelemento_nome;
+	public void setSubElemento(String subElemento) {
+		this.subElemento = subElemento;
 	}
 
-
-	public Integer getFuncao_codigo() {
-		return funcao_codigo;
+	public Integer getCodFuncao() {
+		return codFuncao;
 	}
 
-
-	public void setFuncao_codigo(Integer funcao_codigo) {
-		this.funcao_codigo = funcao_codigo;
+	public void setCodFuncao(Integer codFuncao) {
+		this.codFuncao = codFuncao;
 	}
-
 
-	public String getFuncao_nome() {
-		return funcao_nome;
+	public String getFuncao() {
+		return funcao;
 	}
 
-
-	public void setFuncao_nome(String funcao_nome) {
-		this.funcao_nome = funcao_nome;
+	public void setFuncao(String funcao) {
+		this.funcao = funcao;
 	}
-
 
-	public Integer getSubfuncao_codigo() {
-		return subfuncao_codigo;
+	public Integer getCodSubfuncao() {
+		return codSubfuncao;
 	}
 
-
-	public void setSubfuncao_codigo(Integer subfuncao_codigo) {
-		this.subfuncao_codigo = subfuncao_codigo;
+	public void setCodSubfuncao(Integer codSubfuncao) {
+		this.codSubfuncao = codSubfuncao;
 	}
 
-
-	public String getSubfuncao_nome() {
-		return subfuncao_nome;
+	public String getSubfuncao() {
+		return subfuncao;
 	}
-
 
-	public void setSubfuncao_nome(String subfuncao_nome) {
-		this.subfuncao_nome = subfuncao_nome;
+	public void setSubfuncao(String subfuncao) {
+		this.subfuncao = subfuncao;
 	}
 
-
-	public Integer getPrograma_codigo() {
-		return programa_codigo;
+	public Integer getCodPrograma() {
+		return codPrograma;
 	}
-
 
-	public void setPrograma_codigo(Integer programa_codigo) {
-		this.programa_codigo = programa_codigo;
+	public void setCodPrograma(Integer codPrograma) {
+		this.codPrograma = codPrograma;
 	}
 
-
-	public String getPrograma_nome() {
-		return programa_nome;
+	public String getPrograma() {
+		return programa;
 	}
-
 
-	public void setPrograma_nome(String programa_nome) {
-		this.programa_nome = programa_nome;
+	public void setPrograma(String programa) {
+		this.programa = programa;
 	}
 
-
-	public Integer getAcao_codigo() {
-		return acao_codigo;
+	public Integer getCodAcao() {
+		return codAcao;
 	}
-
 
-	public void setAcao_codigo(Integer acao_codigo) {
-		this.acao_codigo = acao_codigo;
+	public void setCodAcao(Integer codAcao) {
+		this.codAcao = codAcao;
 	}
 
-
-	public String getAcao_nome() {
-		return acao_nome;
+	public String getAcaoe() {
+		return acaoe;
 	}
 
-
-	public void setAcao_nome(String acao_nome) {
-		this.acao_nome = acao_nome;
+	public void setAcaoe(String acaoe) {
+		this.acaoe = acaoe;
 	}
-
 
-	public Integer getFonte_recurso_codigo() {
-		return fonte_recurso_codigo;
+	public Integer getCodFonteRecurso() {
+		return codFonteRecurso;
 	}
 
-
-	public void setFonte_recurso_codigo(Integer fonte_recurso_codigo) {
-		this.fonte_recurso_codigo = fonte_recurso_codigo;
+	public void setCodFonteRecurso(Integer codFonteRecurso) {
+		this.codFonteRecurso = codFonteRecurso;
 	}
-
 
-	public String getFonte_recurso_nome() {
-		return fonte_recurso_nome;
+	public String getFonteRecurso() {
+		return fonteRecurso;
 	}
 
-
-	public void setFonte_recurso_nome(String fonte_recurso_nome) {
-		this.fonte_recurso_nome = fonte_recurso_nome;
+	public void setFonteRecurso(String fonteRecurso) {
+		this.fonteRecurso = fonteRecurso;
 	}
 
-
-	public Integer getEmpenho_ano() {
-		return empenho_ano;
+	public Integer getEmpenhoAno() {
+		return empenhoAno;
 	}
-
 
-	public void setEmpenho_ano(Integer empenho_ano) {
-		this.empenho_ano = empenho_ano;
+	public void setEmpenhoAno(Integer empenhoAno) {
+		this.empenhoAno = empenhoAno;
 	}
 
-
-	public String getEmpenho_modalidade_nome() {
-		return empenho_modalidade_nome;
+	public String getEmpenhoModalidade() {
+		return empenhoModalidade;
 	}
-
 
-	public void setEmpenho_modalidade_nome(String empenho_modalidade_nome) {
-		this.empenho_modalidade_nome = empenho_modalidade_nome;
+	public void setEmpenhoModalidade(String empenhoModalidade) {
+		this.empenhoModalidade = empenhoModalidade;
 	}
 
-
-	public Integer getEmpenho_modalidade_codigo() {
-		return empenho_modalidade_codigo;
+	public Integer getCodEmpenhoModalidade() {
+		return codEmpenhoModalidade;
 	}
 
-
-	public void setEmpenho_modalidade_codigo(Integer empenho_modalidade_codigo) {
-		this.empenho_modalidade_codigo = empenho_modalidade_codigo;
+	public void setCodEmpenhoModalidade(Integer codEmpenhoModalidade) {
+		this.codEmpenhoModalidade = codEmpenhoModalidade;
 	}
-
 
-	public Integer getEmpenho_numero() {
-		return empenho_numero;
+	public Integer getEmpenhoNumero() {
+		return empenhoNumero;
 	}
 
-
-	public void setEmpenho_numero(Integer empenho_numero) {
-		this.empenho_numero = empenho_numero;
+	public void setEmpenhoNumero(Integer empenhoNumero) {
+		this.empenhoNumero = empenhoNumero;
 	}
-
 
-	public Integer getSubempenho() {
-		return subempenho;
+	public Integer getSubEmpenho() {
+		return subEmpenho;
 	}
 
-
-	public void setSubempenho(Integer subempenho) {
-		this.subempenho = subempenho;
+	public void setSubEmpenho(Integer subEmpenho) {
+		this.subEmpenho = subEmpenho;
 	}
 
-
-	public String getIndicador_subempenho() {
-		return indicador_subempenho;
+	public String getIndicadorSubempenho() {
+		return indicadorSubempenho;
 	}
-
 
-	public void setIndicador_subempenho(String indicador_subempenho) {
-		this.indicador_subempenho = indicador_subempenho;
+	public void setIndicadorSubempenho(String indicadorSubempenho) {
+		this.indicadorSubempenho = indicadorSubempenho;
 	}
 
-
-	public Integer getCredor_codigo() {
-		return credor_codigo;
+	public Integer getCodCredor() {
+		return codCredor;
 	}
-
 
-	public void setCredor_codigo(Integer credor_codigo) {
-		this.credor_codigo = credor_codigo;
+	public void setCodCredor(Integer codCredor) {
+		this.codCredor = codCredor;
 	}
 
-
-	public String getCredor_nome() {
-		return credor_nome;
+	public String getCredor() {
+		return credor;
 	}
 
-
-	public void setCredor_nome(String credor_nome) {
-		this.credor_nome = credor_nome;
+	public void setCredor(String credor) {
+		this.credor = credor;
 	}
-
 
-	public Integer getModalidade_licitacao_codigo() {
-		return modalidade_licitacao_codigo;
+	public Integer getCodModalidadeLicitacao() {
+		return codModalidadeLicitacao;
 	}
 
-
-	public void setModalidade_licitacao_codigo(Integer modalidade_licitacao_codigo) {
-		this.modalidade_licitacao_codigo = modalidade_licitacao_codigo;
+	public void setCodModalidadeLicitacao(Integer codModalidadeLicitacao) {
+		this.codModalidadeLicitacao = codModalidadeLicitacao;
 	}
-
 
-	public String getModalidade_licitacao_nome() {
-		return modalidade_licitacao_nome;
+	public String getModalidadeLicitacao() {
+		return modalidadeLicitacao;
 	}
 
-
-	public void setModalidade_licitacao_nome(String modalidade_licitacao_nome) {
-		this.modalidade_licitacao_nome = modalidade_licitacao_nome;
+	public void setModalidadeLicitacao(String modalidadeLicitacao) {
+		this.modalidadeLicitacao = modalidadeLicitacao;
 	}
 
-
-	public String getValor_empenhado() {
-		return valor_empenhado;
+	public String getValorEmpenhado() {
+		return valorEmpenhado;
 	}
-
 
-	public void setValor_empenhado(String valor_empenhado) {
-		this.valor_empenhado = valor_empenhado;
+	public void setValorEmpenhado(String valorEmpenhado) {
+		this.valorEmpenhado = valorEmpenhado;
 	}
 
-
-	public String getValor_liquidado() {
-		return valor_liquidado;
+	public String getValorLiquido() {
+		return valorLiquido;
 	}
-
 
-	public void setValor_liquidado(String valor_liquidado) {
-		this.valor_liquidado = valor_liquidado;
+	public void setValorLiquido(String valorLiquido) {
+		this.valorLiquido = valorLiquido;
 	}
 
-
-	public String getValor_pago() {
-		return valor_pago;
+	public String getValorPago() {
+		return valorPago;
 	}
 
-
-	public void setValor_pago(String valor_pago) {
-		this.valor_pago = valor_pago;
+	public void setValorPago(String valorPago) {
+		this.valorPago = valorPago;
 	}
-
+	
+	
+	
 }
 
 
