@@ -1,28 +1,28 @@
 package expense.recife.dto;
 
-public class ExpenseMensal {
+public class ExpenseFont {
 	
-	private Integer mes;
+	private String fonteRecurso;
 	private String liquido;
 	private String pago;
 	private String empenhado;
 	
-	public ExpenseMensal() {
+	public ExpenseFont() {
 	}
 
-	public ExpenseMensal(Integer mes, String liquido, String pago, String empenhado) {
-		this.mes = mes;
+	public ExpenseFont(String fonteRecurso, String liquido, String pago, String empenhado) {
+		this.fonteRecurso = fonteRecurso;
 		this.liquido = liquido;
 		this.pago = pago;
 		this.empenhado = empenhado;
 	}
 
-	public Integer getMes() {
-		return mes;
+	public String getFonteRecurso() {
+		return fonteRecurso;
 	}
 
-	public void setMes(Integer mes) {
-		this.mes = mes;
+	public void setFonteRecurso(String fonteRecurso) {
+		this.fonteRecurso = fonteRecurso;
 	}
 
 	public String getLiquido() {
@@ -48,6 +48,5 @@ public class ExpenseMensal {
 	public void setEmpenhado(String empenhado) {
 		this.empenhado = empenhado;
 	}
-	
-	
+		
 }
