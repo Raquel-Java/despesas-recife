@@ -1,14 +1,14 @@
 package expense.recife.service;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import expense.recife.client.ExpenseClient;
+import expense.recife.dto.ExpenseDto;
 import expense.recife.entity.Expense;
 import expense.recife.repository.ExpenseRepository;
 
@@ -22,7 +22,30 @@ public class ExpenseServiceImpl implements ExpenseService{
 
 	@Override
 	public List<Expense> getExpense() {
+		return repository.findAll();
+	}
+
+	@Override
+	public void removeExpense(String id) {
+		repository.deleteById(Long.valueOf(id));
 		
+	}
+
+	@Override
+	public Expense createExpense(ExpenseDto expense) {
+		Expense e = new Expense(expense.getAno(), 
+				expense.getMes(), 
+				expense.getCodOrgao(), 
+				expense.getNomeOrgao(), 
+				expense.getSubElemento(), 
+				expense.getValorEmpenhado(), 
+				expense.getValorLiquido(), 
+				expense.getValorPago());
+		return repository.save(e);
+	}
+
+	@Override
+	public void crudExpense() {
 		List<Expense> expenses = new ArrayList<>();
 		List<Object> list = clientExpense.expenseForClient();
 		
@@ -104,24 +127,31 @@ public class ExpenseServiceImpl implements ExpenseService{
 		    }
 		}
 		
-		return expenses;
-	}
-
-//	@Override
-//	public void changeForExpense(Expense expense, String id) {
-//		repository.
-//		
-//	}
-
-	@Override
-	public void removeExpense(String id) {
-		repository.deleteById(Long.valueOf(id));
+		// Apenas nesse sistema a nivel de teste, sempre deleto e insiro tudo denovo
+		repository.deleteAll();
+		repository.saveAll(expenses);
 		
 	}
 
 	@Override
-	public Expense createExpense(Expense expense) {
-		return repository.save(expense);
+	public Expense changeForExpense(ExpenseDto expense) {
+		Expense e = new Expense(
+				expense.getid(), 
+				expense.getAno(), 
+				expense.getMes(), 
+				expense.getCodOrgao(), 
+				expense.getNomeOrgao(), 
+				expense.getSubElemento(), 
+				expense.getValorEmpenhado(), 
+				expense.getValorLiquido(), 
+				expense.getValorPago());
+		return repository.saveAndFlush(e);
+		
+	}
+
+	@Override
+	public Optional<Expense> getExpenseForById(String id){
+		return repository.findById(Long.valueOf(id));
 	}
 
 }

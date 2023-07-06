@@ -101,6 +101,95 @@ public class Expense {
 		this.unidade = unidade;
 	}
 	
+	public Expense(Integer ano, Integer mes, Integer codOrgao, String nomeOrgao,String subElemento,
+			String valorEmpenhado, String valorLiquido, String valorPago){
+		this.ano = ano;
+		this.mes = mes;
+		this.codOrgao = codOrgao;
+		this.nomeOrgao = nomeOrgao;
+		this.codUnidade = "";
+		this.codCategoriaEconomica = 0;
+		this.categoriaEconomica = "";
+		this.codGrupoDespesa = 0;
+		this.grupoDespesa = "";
+		this.codModalidadeAplicacao = 0;
+		this.modalidadeAplicacao = "";
+		this.codElemento = 0;
+		this.elementoNome = "";
+		this.codSubElemento = 0;
+		this.subElemento = subElemento;
+		this.codFuncao = 0;
+		this.funcao = "";
+		this.codSubfuncao = 0;
+		this.subfuncao = "";
+		this.codPrograma = 0;
+		this.programa = "";
+		this.codAcao = 0;
+		this.acao = "";
+		this.codFonteRecurso = 0;
+		this.fonteRecurso = "";
+		this.empenhoAno = 2023;
+		this.empenhoModalidade = "";
+		this.codEmpenhoModalidade = 0;
+		this.empenhoNumero = 0;
+		this.subEmpenho = 0;
+		this.indicadorSubempenho = "";
+		this.codCredor = 0;
+		this.credor = "";
+		this.codModalidadeLicitacao = 0;
+		this.modalidadeLicitacao = "";
+		this.valorEmpenhado = valorEmpenhado;
+		this.valorLiquido = valorLiquido;
+		this.valorPago = valorPago;
+		this.unidade = "";
+		
+	}
+	
+	public Expense(Long id,Integer ano, Integer mes, Integer codOrgao, String nomeOrgao,String subElemento,
+			String valorEmpenhado, String valorLiquido, String valorPago){
+		this.id=id;
+		this.ano = ano;
+		this.mes = mes;
+		this.codOrgao = codOrgao;
+		this.nomeOrgao = nomeOrgao;
+		this.codUnidade = "";
+		this.codCategoriaEconomica = 0;
+		this.categoriaEconomica = "";
+		this.codGrupoDespesa = 0;
+		this.grupoDespesa = "";
+		this.codModalidadeAplicacao = 0;
+		this.modalidadeAplicacao = "";
+		this.codElemento = 0;
+		this.elementoNome = "";
+		this.codSubElemento = 0;
+		this.subElemento = subElemento;
+		this.codFuncao = 0;
+		this.funcao = "";
+		this.codSubfuncao = 0;
+		this.subfuncao = "";
+		this.codPrograma = 0;
+		this.programa = "";
+		this.codAcao = 0;
+		this.acao = "";
+		this.codFonteRecurso = 0;
+		this.fonteRecurso = "";
+		this.empenhoAno = 2023;
+		this.empenhoModalidade = "";
+		this.codEmpenhoModalidade = 0;
+		this.empenhoNumero = 0;
+		this.subEmpenho = 0;
+		this.indicadorSubempenho = "";
+		this.codCredor = 0;
+		this.credor = "";
+		this.codModalidadeLicitacao = 0;
+		this.modalidadeLicitacao = "";
+		this.valorEmpenhado = valorEmpenhado;
+		this.valorLiquido = valorLiquido;
+		this.valorPago = valorPago;
+		this.unidade = "";
+		
+	}
+	
 	
 	public Expense() {
 	}

@@ -12,10 +12,10 @@ public class DataSourceConfig {
 	@Bean
 	DataSource getDataSource() {
 		return DataSourceBuilder.create()
-				.driverClassName("org.h2.Driver")
-				.url("jdbc:h2:mem:/expense-db")
-				.username("sa")
-				.password("sa").build();
+				.driverClassName("org.postgresql.Driver")
+				.url("jdbc:postgresql://lallah.db.elephantsql.com:5432/vcultaeo")
+				.username("vcultaeo")
+				.password("nRZF78QtyqKriU8Wn_EbEKk6iEoWADbs").build();
 	}
 
 }
