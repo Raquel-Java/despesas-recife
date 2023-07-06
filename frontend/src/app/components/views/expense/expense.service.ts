@@ -24,7 +24,7 @@ export class ExpenseService {
   }
 
   errorHandler(e:any):Observable<any>{
-    this.showMessege('Ocorreu um erro so lado do servidor! ',true);
+    this.showMessege('Ocorreu um erro do lado do servidor! ',true);
     return EMPTY
   }
 

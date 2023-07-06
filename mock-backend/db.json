@@ -1,15 +1,3 @@
 {
-  "expense": [
-    {
-      "ano": "2023",
-      "mes": "3",
-      "codOrgao": "10",
-      "nomeOrgao": "INFRAESTRUTURA",
-      "subElemento": "ESCOLA",
-      "valorEmpenhado": "5",
-      "valorLiquido": "6",
-      "valorPago": "7",
-      "id": 4
-    }
-  ]
+  "expense": []
 }
