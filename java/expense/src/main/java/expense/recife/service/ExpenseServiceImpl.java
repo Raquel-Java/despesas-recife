@@ -22,22 +22,21 @@ public class ExpenseServiceImpl implements ExpenseService{
 		return clientExpense.expenseForClient();
 	}
 
-	@Override
-	public void changeForExpense(Expense expense, String id) {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void changeForExpense(Expense expense, String id) {
+//		repository.
+//		
+//	}
 
 	@Override
 	public void removeExpense(String id) {
-		// TODO Auto-generated method stub
+		repository.deleteById(Long.valueOf(id));
 		
 	}
 
 	@Override
 	public Expense createExpense(Expense expense) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(expense);
 	}
 
 }

@@ -11,7 +11,7 @@ public interface ExpenseService {
 
 	List<Expense> getExpense();
 
-	void changeForExpense(Expense expense,String id);
+//	void changeForExpense(Expense expense,String id);
 	
 	void removeExpense(String id);
 
