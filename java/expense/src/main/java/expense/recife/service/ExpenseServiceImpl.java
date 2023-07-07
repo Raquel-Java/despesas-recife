@@ -33,9 +33,9 @@ public class ExpenseServiceImpl implements ExpenseService{
 
 	@Override
 	public Expense createExpense(ExpenseDto expense) {
-		Expense e = new Expense(expense.getAno(), 
-				expense.getMes(), 
-				expense.getCodOrgao(), 
+		Expense e = new Expense(Integer.valueOf(expense.getAno()), 
+				Integer.valueOf(expense.getMes()), 
+				Integer.valueOf(expense.getCodOrgao()), 
 				expense.getNomeOrgao(), 
 				expense.getSubElemento(), 
 				expense.getValorEmpenhado(), 
@@ -134,16 +134,16 @@ public class ExpenseServiceImpl implements ExpenseService{
 	@Override
 	public Expense changeForExpense(ExpenseDto expense) {
 		Expense e = new Expense(
-				expense.getId(), 
-				expense.getAno(), 
-				expense.getMes(), 
-				expense.getCodOrgao(), 
+				Long.valueOf(expense.getId()), 
+				Integer.valueOf(expense.getAno()), 
+				Integer.valueOf(expense.getMes()), 
+				Integer.valueOf(expense.getCodOrgao()), 
 				expense.getNomeOrgao(), 
 				expense.getSubElemento(), 
 				expense.getValorEmpenhado(), 
 				expense.getValorLiquido(), 
 				expense.getValorPago());
-		return repository.saveAndFlush(e);
+		return repository.save(e);
 		
 	}
 
@@ -161,10 +161,10 @@ public class ExpenseServiceImpl implements ExpenseService{
 		
 		for (Expense expense : Expenses) {
 			ExpenseDto e = new ExpenseDto();	
-			e.setId(expense.getId());
-			e.setAno(expense.getAno());
-			e.setCodOrgao(expense.getCodOrgao());
-			e.setMes(expense.getMes());
+			e.setId(String.valueOf(expense.getId()));
+			e.setAno(String.valueOf(expense.getAno()));
+			e.setCodOrgao(String.valueOf(expense.getCodOrgao()));
+			e.setMes(String.valueOf(expense.getMes()));
 			e.setNomeOrgao(expense.getNomeOrgao());
 			e.setSubElemento(expense.getSubElemento());
 			e.setValorEmpenhado(expense.getValorEmpenhado());

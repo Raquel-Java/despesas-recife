@@ -5,20 +5,32 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude
 public class ExpenseDto {
 	
-	private Long id;
-	Integer ano;
-	Integer mes;
-	Integer codOrgao;
-	String nomeOrgao;
-	String subElemento;
-	String valorEmpenhado;
-	String valorLiquido;
-	String valorPago;
+	private String id;
+	private String ano;
+	private String mes;
+	private String codOrgao;
+	private String nomeOrgao;
+	private String subElemento;
+	private String valorEmpenhado;
+	private String valorLiquido;
+	private String valorPago;
 	
 	public ExpenseDto() {
 	}
 
-	public ExpenseDto(Long id, Integer ano, Integer mes, Integer codOrgao, String nomeOrgao, String subElemento,
+	public ExpenseDto(String ano, String mes, String codOrgao, String nomeOrgao, String subElemento,
+			String valorEmpenhado, String valorLiquido, String valorPago) {
+		this.ano = ano;
+		this.mes = mes;
+		this.codOrgao = codOrgao;
+		this.nomeOrgao = nomeOrgao;
+		this.subElemento = subElemento;
+		this.valorEmpenhado = valorEmpenhado;
+		this.valorLiquido = valorLiquido;
+		this.valorPago = valorPago;
+	}
+
+	public ExpenseDto(String id, String ano, String mes, String codOrgao, String nomeOrgao, String subElemento,
 			String valorEmpenhado, String valorLiquido, String valorPago) {
 		this.id = id;
 		this.ano = ano;
@@ -31,35 +43,35 @@ public class ExpenseDto {
 		this.valorPago = valorPago;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public Integer getAno() {
+	public String getAno() {
 		return ano;
 	}
 
-	public void setAno(Integer ano) {
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
 
-	public Integer getMes() {
+	public String getMes() {
 		return mes;
 	}
 
-	public void setMes(Integer mes) {
+	public void setMes(String mes) {
 		this.mes = mes;
 	}
 
-	public Integer getCodOrgao() {
+	public String getCodOrgao() {
 		return codOrgao;
 	}
 
-	public void setCodOrgao(Integer codOrgao) {
+	public void setCodOrgao(String codOrgao) {
 		this.codOrgao = codOrgao;
 	}
 
@@ -102,5 +114,10 @@ public class ExpenseDto {
 	public void setValorPago(String valorPago) {
 		this.valorPago = valorPago;
 	}
+	
+	
+
+	
+	
 
 }

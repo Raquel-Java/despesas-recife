@@ -29,11 +29,13 @@ public class ExpenseControl {
 	 
 	 @CrossOrigin(origins = "*")
 	 @GetMapping(value = "/grava-dados")
-	 public void popularDb(){
+	 public String popularDb(){
 		 try {
 			 service.crudExpense();
+			 return "Dados salvos na base com sucesso!";
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getCause() + " | " + e.getMessage());
+			return "Erro: " + e.getCause() + " | " + e.getMessage();
 		}
 	       
 	 }
@@ -73,12 +75,4 @@ public class ExpenseControl {
 	 public void deletar(@RequestParam("id") String id, HttpServletRequest request){
 		 service.removeExpense(id);
 	 }
-	 
-	 
-	 
-	 
-
-	
-	
-
 }
